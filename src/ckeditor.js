@@ -80,6 +80,7 @@ ClassicEditor.defaultConfig = {
 		items: [
 			'heading',
 			'|',
+			'fontfamily',
 			'fontsize',
 			'fontColor',
 			'fontBackgroundColor',
