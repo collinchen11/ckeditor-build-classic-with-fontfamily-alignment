@@ -89,7 +89,6 @@ ClassicEditor.defaultConfig = {
 			'italic',
 			'strikethrough',
 			'link',
-			'insertTable',
 			'|',
 			'alignment',
 			'bulletedList',
