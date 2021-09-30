@@ -102,6 +102,25 @@ ClassicEditor.defaultConfig = {
 			'redo'
 		]
 	},
+	image: {
+		toolbar: [
+			'imageStyle:side',
+			'imageStyle:align-left',
+			'imageStyle:align-right',
+			'imageStyle:align-center',
+			'imageStyle:full',
+			'|',
+			'toggleImageCaption',
+			'imageTextAlternative'
+		]
+	},
+	table: {
+		contentToolbar: [
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
+		]
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };
