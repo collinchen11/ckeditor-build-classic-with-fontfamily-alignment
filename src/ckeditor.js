@@ -105,12 +105,8 @@ ClassicEditor.defaultConfig = {
 	image: {
 		toolbar: [
 			'imageStyle:side',
-			'imageStyle:align-left',
-			'imageStyle:align-right',
-			'imageStyle:align-center',
 			'imageStyle:full',
 			'|',
-			'toggleImageCaption',
 			'imageTextAlternative'
 		]
 	},
