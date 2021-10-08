@@ -1,5 +1,5 @@
 /**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
+ * @license Copyright (c) 2003-2021, CKSource - Frederico Knabben. All rights reserved.
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
@@ -29,27 +29,28 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 
+import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
-import Base64UploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/base64uploadadapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
 	Essentials,
-	Base64UploadAdapter,
 	UploadAdapter,
 	Autoformat,
 	Bold,
 	Italic,
 	BlockQuote,
 	CKFinder,
+	CloudServices,
 	EasyImage,
 	Heading,
 	Image,
@@ -66,12 +67,13 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
+	Base64UploadAdapter,
 	FontSize,
 	FontFamily,
 	FontColor,
 	FontBackgroundColor,
 	Alignment,
-	Strikethrough
+	Strikethrough,
 ];
 
 // Editor configuration.
@@ -90,11 +92,14 @@ ClassicEditor.defaultConfig = {
 			'strikethrough',
 			'link',
 			'|',
-			'alignment',
+			,'alignment',
 			'bulletedList',
 			'numberedList',
 			'|',
-			'imageUpload',
+			'outdent',
+			'indent',
+			'|',
+			'uploadImage',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
@@ -104,9 +109,11 @@ ClassicEditor.defaultConfig = {
 	},
 	image: {
 		toolbar: [
+			'imageStyle:inline',
+			'imageStyle:block',
 			'imageStyle:side',
-			'imageStyle:full',
 			'|',
+			'toggleImageCaption',
 			'imageTextAlternative'
 		]
 	},
