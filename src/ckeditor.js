@@ -38,6 +38,7 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough';
+import { ImageResize } from '@ckeditor/ckeditor5-image';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -74,6 +75,7 @@ ClassicEditor.builtinPlugins = [
 	FontBackgroundColor,
 	Alignment,
 	Strikethrough,
+	ImageResize,
 ];
 
 // Editor configuration.
@@ -112,6 +114,7 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:inline',
 			'imageStyle:block',
 			'imageStyle:side',
+			'imageStyle:alignLeft',
 			'|',
 			'toggleImageCaption',
 			'imageTextAlternative'
