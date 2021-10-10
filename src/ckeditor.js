@@ -115,6 +115,10 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:block',
 			'imageStyle:side',
 			'imageStyle:alignLeft',
+			'imageStyle:alignRight',
+			'imageStyle:alignBlockLeft',
+			'imageStyle:alignBlockRight',
+			'imageStyle:alignCenter',
 			'|',
 			'toggleImageCaption',
 			'imageTextAlternative'
